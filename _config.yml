@@ -114,7 +114,7 @@ url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-#disqus: "beautiful-jekyll"
+disqus: "beautiful-jekyll-2"
 
 # Facebook App ID
 # fb_app_id: ""
