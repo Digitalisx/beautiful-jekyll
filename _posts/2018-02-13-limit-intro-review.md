@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Limits intro Review
-subtitle: AP Calculus AB - Limits and Continuity
+subtitle: AP Calculus AB - Limits
 tags: 'math, calculus'
 published: true
 date: '2018-02-13'
@@ -45,4 +45,3 @@ $$f\left( x \right) =x+2$$와 $$x=3$$인 $$f\left( x \right)$$의 극한 값으�
 ### 예제
 
 ![3.PNG]({{site.baseurl}}/img/3.PNG)
-
