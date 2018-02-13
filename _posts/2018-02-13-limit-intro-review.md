@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Limits intro Review
-subtitle: AP Calculus AB - Limits
+title: Limits
+subtitle: AP Calculus AB - 극한
 tags: 'math, calculus'
 published: true
 date: '2018-02-13'
