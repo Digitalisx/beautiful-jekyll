@@ -2,7 +2,9 @@
 layout: post
 title: Limits intro Review
 subtitle: AP Calculus AB - Limits and Continuity
-tags: math, calculus
+tags: 'math, calculus'
+published: true
+date: '2018-02-13'
 ---
 ### 극한
 
@@ -21,7 +23,9 @@ x가 3일때 함수 f(X) = x + 2의 극한과 f(3)의 값은 동일하다. 그�
 
 극한에 대해서 설명할 수 있는 또 다른 표기법도 존재한다. 아래의 예시는 함수 f에서 x=3에 근접한 극한 값을 나타낸다.
 
-![1](https://github.com/Digitalisx/digitalisx.github.io/blob/master/img/1.PNG)
+katex.render("c = \\pm\\sqrt{a^2 + b^2}", element);
+
+\\( x(t)=\frac{-b\pm \sqrt{{b}^{2}-4ac}}{2a} \\)
 
 ### 극한은 양쪽에서 동일해야한다.
 
@@ -38,4 +42,3 @@ f(x)=x+2와 x=3인 f(x)의 극한 값으로 돌아와보자. 우리는 x의 값�
 ### 예제
 
 ![4](https://github.com/Digitalisx/digitalisx.github.io/blob/master/img/3.PNG)
-
