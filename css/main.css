@@ -8,6 +8,8 @@ layout: null
 
 body {
   font-family: 'Noto Sans', sans-serif;
+  text-align: justify;
+  word-break: normal;
   font-size: 18px;
   color: #404040;
   position: relative;
