@@ -52,10 +52,14 @@ Digital Forensic 관련으로 아는 고수님께서 학생들을 위해 과제�
 
 ## USB Information
 
+Prefetch, Windows Event Log, Registry
+
 ## Email
+
+Windows 10, Outlook, Thunderbird
 
 ## Visualization Method
 
-PyQt5 or Web
+PyQt5 or Web (Flask)
 
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
