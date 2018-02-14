@@ -8,15 +8,17 @@ date: '2018-02-15'
 bigimg: /img/fenrir.PNG
 header-img: /img/fenrir.PNG
 ---
+[TOC]
+
 ## Overview
 
 
-Digital Forensic 관련으로 아는 고수님께서 학생들을 위해 과제를 내주셨다길래 Live System 상에서 Digital Forensic을 진행할 수 있게 해주는 도구를 개인적으로 개발하고 있던 와중, 이와 관련된 자료로 Mattia Epifani이라는 분께서 SANS Forensics Prague Summit & Training 2013에서 발표한 [Cloud Storage Forensics](hhttps://digital-forensics.sans.org/community/summits)라는 자료에 대부분나와있기는 하지만, 꽤나 업데이트가 진행된 상황이라 다른 부분이 어느정도 존재한다. 그래서 
+Digital Forensic 관련으로 아는 고수님께서 학생들을 위해 과제를 내주셨다길래 `Live System` 상에서 Digital Forensic을 진행할 수 있게 해주는 도구를 개인적으로 개발하고 있던 와중, 이와 관련된 자료로 Mattia Epifani이라는 분께서 SANS Forensics Prague Summit & Training 2013에서 발표한 [Cloud Storage Forensics](hhttps://digital-forensics.sans.org/community/summits)라는 자료에 대부분나와있기는 하지만, 꽤나 업데이트가 진행된 상황이라 다른 부분이 어느정도 존재한다. 그래서 
 
 ## Artifact 수집 방안
 
-- 파일을 구글 드라이브에 업로드하였을 때 (snapshot.db)
-- 구글 드라이브에서 파일을 삭제하였을 때 (snapshot_sync.log)
+- 파일을 구글 드라이브에 업로드하였을 때 `snapshot.db`
+- 구글 드라이브에서 파일을 삭제하였을 때 `snapshot_sync.log`
 - 로컬 폴더에서 파일을 삭제하였을 때 (
 - 구글 드라이브에 새로운 파일이 추가되었을 때
 - 구글 드라이브를 설치하였을 때
