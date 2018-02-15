@@ -11,34 +11,24 @@ header-img: /img/fenrir.PNG
 ## Overview
 
 
-Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/deok9/)님께서 학생들을 위해 과제를 출제하셨다길래 어떤 과제인지 궁금중인지 들어 확인해보았다. 큰 주제는 **"활성 시스템 정보 유출 분석 도구 개발"** 이었다. 최근에 [NIST Data Leakage Data](https://www.cfreds.nist.gov/data_leakage_case/data-leakage-case.html)들을 이용해서 내부 데이터 유출에 관련한 국세청 강의 자료도 만들고.. 수상은 하지 못했지만 [제 5회 디지털 범인을 찾아라 경진대회](https://www.forensickorea.org/board_notice/766)에서도 악성코드와 원격 접속을 활용한 내부 정보 유출 Case를 다뤄볼 수 있었다. 해당 Case들을 다뤄보면서 개인적으로 느낀 점은 아래와 같다. (분석가의 역량에 따라 다를 수는 있을 것이다.)
+Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/deok9/)님께서 학생들을 위해 과제를 출제하셨다길래 어떤 과제인지 궁금중인지 들어 확인해보았다. 큰 주제는 **"활성 시스템 정보 유출 분석 도구 개발"** 이었다. 최근에 [NIST Data Leakage Case](https://www.cfreds.nist.gov/data_leakage_case/data-leakage-case.html)들을 이용해서 내부 데이터 유출에 관련한 국세청 강의 자료도 만들고.. 실력이 부족하여 수상은 하지 못했지만 [제 5회 디지털 범인을 찾아라 경진대회](https://www.forensickorea.org/board_notice/766)에서도 악성코드와 원격 접속(RDP)을 활용한 내부 정보 유출 Case를 다뤄볼 수 있었다.
 
 
-**1. 눈에 띄는 악성행위가 존재하지 않는다.**
+내부 정보 유출과 관련하여서 조사하는 Artifact 중에서 외부 저장 장치와 같은 Artifact는 운영체제에 종속적인 경향이 있어서 변화가 적다. 그래서 REGA나 조금 오래된 툴킷들을 통해서도 손쉽게 파싱이 가능하였고 분석에 있어 시간을 많이 단축 할 수 있었다. (하지만 새로운 버전의 운영체제 출시나 파일 포맷을 업데이트 한다면? 망했어요)
 
 
-악성코드를 활용한 시스템 공격, 
+하지만 이번 과제에서 제출된 주요 Artifact (Cloud, Email)들은 많이 조사되는 대상이고 중요성이 큰 Artifact임에도 불구하고 소프트웨어에 종속적인 경향이 존재한다. 그래서 소프트웨어 자체의 업데이트에 의해 그 포맷이나 내용이 달라질 수 있어 툴킷이 업데이트 주기적으로 업데이트 되지 않는다면 깔끔한 결과를 얻을 수가 없다. (딱히 도구가 존재하지 않는 것도 한 몫하더라) 그래서 이와 관련된 Artifact는 수동으로 분석을 진행해왔다는 단점을 가지고 있었다. (상용 프로그램이나 개인적으로 소장하고 계신 스크립트나 프로그램들은 개선이 되어있다고 생각된다.)
 
 
-**2. 유출 수단 및 Vector가 너무 다양하다.**
+이러한 점에서 추후 분석시간을 단축시키기 위해서 나만의 라이브러리나 툴킷의 필요성을 느꼈고, 난이도 방면에서도 전혀 어려운 일이 아니었기 때문에 입맛에 맞게 개발을 한 번 해보기로 하였다.
 
 
-3. 
-
-`Live System` 상에서 Digital Forensic을 진행할 수 있게 해주는 도구를 개인적으로 개발하고 있던 와중, 이와 관련된 자료로 Mattia Epifani이라는 분께서 SANS Forensics Prague Summit & Training 2013에서 발표한 [Cloud Storage Forensics](hhttps://digital-forensics.sans.org/community/summits)라는 자료에 대부분나와있기는 하지만, 꽤나 업데이트가 진행된 상황이라 다른 부분이 어느정도 존재한다. 그래서 
-
-## Artifact 수집 방안
+## 시나리오 설정
 
 
 - 파일을 구글 드라이브에 업로드하였을 때 `snapshot.db`  
-
-
 - 구글 드라이브에서 파일을 삭제하였을 때 `snapshot_sync.log`  
-
-
 - 로컬 폴더에서 파일을 삭제하였을 때 (  
-
-
 - 구글 드라이브에 새로운 파일이 추가되었을 때  
 - 구글 드라이브를 설치하였을 때  
 - 구글 드라이브를 삭제하였을 때  
