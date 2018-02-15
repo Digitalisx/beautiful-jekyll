@@ -9,8 +9,8 @@ layout: null
 
 body {
   font-family: 'Nanum Gothic', sans-serif;
-  /*text-align: justify;*/
-  /*word-break: normal;*/
+  text-align: justify;
+  word-break: normal;
   font-size: 18px;
   color: #404040;
   position: relative;
