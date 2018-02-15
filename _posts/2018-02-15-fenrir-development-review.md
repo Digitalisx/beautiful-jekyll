@@ -29,7 +29,6 @@ Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/
 - OS : Windows 10 Home Edition (Intel 64bit)
 - Language : [`Python 3.6.4`](https://www.python.org/downloads/)
 
-## Data Sets
 
 
 ## Cloud Storage Artifact
@@ -84,7 +83,19 @@ Prefetch, Windows Event Log, Registry
 
 Windows 10, Outlook, Thunderbird
 
+## Fenrir Architecture
+
+![Fenrir Architecture.png]({{site.baseurl}}/img/Fenrir Architecture.png)
+
+
 ## Visualization Method
+
+Flask
+
+## Data Sets
+
+개발에 사용되었던 Artifact 및 Data이다. 추후 Library를 개선하거나 자체적인 도구를 만들고싶을때
+활용하면 좋을 것이다.
 
 PyQt5 or Web (Flask)
 
