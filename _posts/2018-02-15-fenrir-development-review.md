@@ -23,7 +23,19 @@ Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/
 이러한 점에서 추후 분석시간을 단축시키기 위해서 나만의 라이브러리나 툴킷의 필요성을 느꼈고, 후에 기술할 Artifact의 분석은 난이도 방면에서도 전혀 어려운 일이 아니었기 때문에 입맛에 맞게 개발을 한 번 해보기로 하였다.
 
 
-## 시나리오 설정
+## Development & Test Environment
+
+
+- OS : Windows 10 Home Edition (Intel 64bit)
+- Language : [`Python 3.6.4`](https://www.python.org/downloads/)
+
+## Data Sets
+
+
+## Cloud Storage Artifact
+
+
+### Base Scenario
 
 
 - 파일을 구글 드라이브에 업로드하였을 때 `snapshot.db`  
