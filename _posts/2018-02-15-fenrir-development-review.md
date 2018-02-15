@@ -11,7 +11,14 @@ header-img: /img/fenrir.PNG
 ## Overview
 
 
-Digital Forensic 관련으로 아는 고수님께서 학생들을 위해 과제를 내주셨다길래 `Live System` 상에서 Digital Forensic을 진행할 수 있게 해주는 도구를 개인적으로 개발하고 있던 와중, 이와 관련된 자료로 Mattia Epifani이라는 분께서 SANS Forensics Prague Summit & Training 2013에서 발표한 [Cloud Storage Forensics](hhttps://digital-forensics.sans.org/community/summits)라는 자료에 대부분나와있기는 하지만, 꽤나 업데이트가 진행된 상황이라 다른 부분이 어느정도 존재한다. 그래서 
+Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/deok9/)님께서 학생들을 위해 과제를 출제하셨다길래 어떤 과제인지 궁금중인지 들어 확인해보았다. 큰 주제는 "활성 시스템 정보 유출 분석 도구 개발"이었다.
+최근에 NIST Data Leakage Data들을 이용해서 내부 데이터 유출에 관련한 국세청 강의 자료도 만들고.. 수상은 하지 못했지만 제 5회 디지털 범인을 찾아라 경진대회에서도 악성코드와 원격 접속을 활용한 내부 정보 유출 Case를 다뤄볼 수 있었다. 해당 Case들을 다뤄보면서 느낀 점은 아래와 같다.
+
+1. 눈에 띄는 악성행위가 존재하지 않는다.
+2. 유출 수단 및 Vector가 너무 다양하다.
+3. 
+
+`Live System` 상에서 Digital Forensic을 진행할 수 있게 해주는 도구를 개인적으로 개발하고 있던 와중, 이와 관련된 자료로 Mattia Epifani이라는 분께서 SANS Forensics Prague Summit & Training 2013에서 발표한 [Cloud Storage Forensics](hhttps://digital-forensics.sans.org/community/summits)라는 자료에 대부분나와있기는 하지만, 꽤나 업데이트가 진행된 상황이라 다른 부분이 어느정도 존재한다. 그래서 
 
 ## Artifact 수집 방안
 
