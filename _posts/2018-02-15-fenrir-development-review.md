@@ -33,6 +33,7 @@ Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/
 
 ## Cloud Storage Artifact
 
+![CFTT.png]({{site.baseurl}}/img/CFTT.png)
 
 ### Base Scenario
 
