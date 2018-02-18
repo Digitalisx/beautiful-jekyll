@@ -68,28 +68,20 @@ Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/
 
 ```python
 def get_remove_log(self, path):
-
 	if os.path.isfile(path):
-
 		self.sync_log = open(path, "rt", encoding="utf-8", errors='ignore')
-		#Important Error Code & HotFix Need
-			
+		#Important Error Code & HotFix Need	
 		self.time_regex = re.compile(TIMESTAMP_DATE)
 		self.time_list = []
-
 		while True:
-				
 			self.line = self.sync_log.readline()
-
 			if not self.line:
 				break
-
 			#Detect File System Change
 			if (self.line.count(DELETE_LOG) != 0):
 				print(self.line)
 				self.sync_log_time = self.time_regex.match(self.line)
                 self.time_list.append(self.sync_log_time.group())
-
 	else:
 		print("Not Found sync_log.log")
 		return -1
