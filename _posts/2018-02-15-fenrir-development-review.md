@@ -37,14 +37,13 @@ Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/
 
 ### Base Scenario
 
-
 - 파일을 구글 드라이브에 업로드하였을 때 `snapshot.db`  
 - 구글 드라이브에서 파일을 삭제하였을 때 `snapshot_sync.log`  
 - 로컬 폴더에서 파일을 삭제하였을 때 (  
 - 구글 드라이브에 새로운 파일이 추가되었을 때  
 - 구글 드라이브를 설치하였을 때  
 - 구글 드라이브를 삭제하였을 때  
-- 외장하드에 대하여 드라이브를 개설하였을 때 (Drive 정보 확인해야함)  
+- 외장하드에 대하여 드라이브를 개설하였을 때 (Drive 정보 확인해야함)
 
 ## 실험 및 수행 환경
 
@@ -66,6 +65,16 @@ Digital Forensic 관련으로 [존경하는 고수](https://www.linkedin.com/in/
 - 파일이 삭제되었는가?
 - 드라이브 클라이언트 자체를 제거하였는가?
 
+## Analysis snapshot.db
+
+![table.JPG]({{site.baseurl}}/img/table.JPG)
+
+
+![local_entry.JPG]({{site.baseurl}}/img/local_entry.JPG)
+
+
+## Anaylsis sync_log.log
+
 ```python
 def get_remove_log(self, path):
 	if os.path.isfile(path):
@@ -81,7 +90,7 @@ def get_remove_log(self, path):
 			if (self.line.count(DELETE_LOG) != 0):
 				print(self.line)
 				self.sync_log_time = self.time_regex.match(self.line)
-                self.time_list.append(self.sync_log_time.group())
+                	self.time_list.append(self.sync_log_time.group())
 	else:
 		print("Not Found sync_log.log")
 		return -1
