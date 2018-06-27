@@ -16,7 +16,7 @@ Data Structure에 따라 사용 Algorithm이 달라지므로 둘은 상호 의�
   
 ## Algorithm 성능 분석법
 
-**Time Complexity (시간 복잡도)** - 수행 시간 
+**Time Complexity (시간 복잡도)** - 수행 시간  
 **Space Complexity (공간 복잡도)** - 메모리 사용량  
 
 일반적으로는 **Time Complexity**를 통해서 우위를 비교한다. (대게 속도에 관심이 많기 때문이다.)
