@@ -78,8 +78,51 @@ Factorial 함수의 Return 부분에 Factorail(num - 1)을 호출하고, (num ==
 
 ### Fibonacci Sequence
 
-Binary Search Algorithm
+```c
+#include <stdio.h>
 
-The Tower of Hanoi
+int Fibona(int num)
+{
+  if(num == 1) // 첫번째 값에 대한 정의
+  {
+    return 0;
+  }
+  else if(num == 2) // 두번째 값에 대한 정의
+  {
+    return 1;
+  }
+  else // 나머지 값은 이전의 값 2개를 기반으로 생성
+  {
+    return Fibona(n-1) + Fibona(n-2);
+  }
+}
+
+int main(void)
+{
+  printf("%d", Fibona(5)); // 9번째 Fibonacci 수열
+  return 0;
+}
+```
+값을 Fibonacci 수열의 방식으로는 구할 수 없는 첫번째, 두번째 값에 대해서 사전적으로 정의를 해놓고 나머지 값에 대해서 첫번째, 두번째 값이 나올때까지 재귀 함수로 순회하는 방식이다.
+
+해당 재귀 함수의 실행 과정은 다음과 같다.
+
+Fibo(5)
+
+Fibo(4) + Fibo(3)
+
+Fibo(3) + Fibo(2) + Fibo(2) + Fibo(1)
+
+Fibo(2) + Fibo(1) + Fibo(2) + Fibo(2) + Fibo(1)
+
+1 + 0 + 1 + 1 + 0 = 3
+
+0, 1, 1, 2, 3 = Correct!
+
+### Binary Search Algorithm (Recursion Version)
+
+
+
+### The Tower of Hanoi
 
 
