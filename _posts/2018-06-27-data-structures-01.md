@@ -157,10 +157,6 @@ Binary Search의 Worst Case, 검색 범위를 줄여나감에 있어 결국 마�
 
 **T(n) = log 2^n**
 
-실제로 이를 비교한 Graph는 아래의 그림과 같다.
-
-
-
 
 ## Big O Notation
 
