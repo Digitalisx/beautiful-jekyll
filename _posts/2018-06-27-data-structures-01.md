@@ -7,29 +7,29 @@ subtitle: Data Structures and Algorithm
 ---
 ## Data Structure & Algorithm
 
-**Data Structure** : 데이터의 표현과 저장 방식
-Algorithm : 저장된 데이터를 대상으로 하는 문제 해결 방식
+**Data Structure** : 데이터의 표현과 저장 방식  
+**Algorithm** : 저장된 데이터를 대상으로 하는 문제 해결 방식
 
-수 많은 데이터를 더 타당하고 합리적으로 저장하고 처리하기 위해서 알아야 하는 학문
-Data Structure에 따라 사용 Algorithm이 달라지므로 둘은 상호 의존적임
+수 많은 데이터를 더 타당하고 합리적으로 저장하고 처리하기 위해서 알아야 하는 학문  
+Data Structure에 따라 사용 Algorithm이 달라지므로 둘은 상호 의존적임  
 
-
+  
 ## Algorithm 성능 분석법
 
-**Time Complexity (시간 복잡도)** - 수행 시간
+**Time Complexity (시간 복잡도)** - 수행 시간 
+**Space Complexity (공간 복잡도)** - 메모리 사용량  
 
-**Space Complexity (공간 복잡도)** - 메모리 사용량
+일반적으로는 **Time Complexity**를 통해서 우위를 비교한다. (대게 속도에 관심이 많기 때문이다.)
 
-일반적으로는 Time Complexity를 통해서 우위를 비교한다. (대게 속도에 관심이 많기 때문이다.)
-
-데이터량 (n) -> 연산 횟수 T(n)
+데이터량 (n)과 연산 횟수 T(n) 를 통해서 각 Algorithm의 수행 속도를 비교할 수 있다.  
 
 항상 좋거나 절대적인 알고리즘은 존재하지 않는다. 데이터의 수, 성능에 대한 민감성에 따라 적절히 사용해야한다.
 
 
 ## Linear Search
 
-일반적으로 가장 많이 사용해왔던 원소 탐색 방법으로 배열의 처음부터 끝까지 값을 비교한다. 
+일반적으로 가장 많이 사용해왔던 원소 탐색 방법으로 배열의 처음부터 끝까지 값을 비교한다.  
+필자는 대부분 많은 데이터들을 List에 넣어서 처리해왔고, 원하는 값을 찾거나 List 원소의 검증을 시행할 때 해당 방법을 많이 사용했던 것으로 기억한다.  
 
 ## Linear Search 예제
 
@@ -88,16 +88,14 @@ int main(void)
 }
 ```
 
-Binary Search Algorithm
+  
+## Binary Search
 
-Condition - 사용 이전에 데이터들이 정렬되어 있어야 한다.
+위에서 설명한 Linear Search랑 동일한 용도로 원소를 찾기 위해 만들어진 Algorithm이다.  
+다만 해당 Algorithm을 사용하기 이전에 대상 데이터들이 **오름차순으로 정렬**되어 있어야 한다.  
 
-
-이전에 살펴본 Linear Search에 비해서 점점 탐색 범위를 줄여나가므로 좋은 성능을 보인다.
-
-Worst Case -> T(n) = Log2^N (Logartihmetic)
-
-![]({{site.baseurl}}/http://arturmeyster.com/content/images/2015/02/binary-search-1.jpeg)
+배열의 양 끝 위치 값을 통해서 중간 값을 찾고, 이를 기준으로 범위를 줄여나가며 값을 탐색하는 Algorithm이다.
+이전에 살펴본 Linear Search에 비해서 점점 탐색 범위를 줄여나가므로 **비교적 좋은 성능**을 보인다.
 
 ```c
 #include <stdio.h>
@@ -136,25 +134,35 @@ int BSearch(int ar[], int len, int target)
 }
 ```
 
+## Best Case & Worst Case
 
-Best Case - 
-Worst Case -
+**Best Case** - 해당 Algorithm에서 Time Complexity가 가장 효율적인 경우   
+**Best Case** - 해당 Algorithm에서 Time Complexity가 가장 비효율적인 경우  
 
-Algorithm의 성능을 파악함에 있어 가장 중요한 것은 Worst Case이다.
-
-Calculate Worst Case
-
-맨 마지막에 있는 경우가 Worst Case가 될 수 있음 -> 데이터 7개에 7번 비교를 해야하므로
-사실상 n
-
-Calculate Average Case
-
-Why use Worst Case?
-
-일반적으로 Average Case는 구하는 과정이 어렵고, 정확한 결과를 구하기 어려움
+Algorithm의 성능을 파악함에 있어 가장 중요한 것은 **Worst Case**이다.
 
 
-Big O Notation
+## Why use Worst Case?
+
+일반적으로 생각하기에는 Average Case가 해당 Algorithm을 표현하고 비교하기에 가장 적절하다고 생각된다.
+그러나 Average Case는 구하는 과정이 어렵고, 다양한 데이터와 시나리오가 적용되어야 하므로 정확한 결과를 구하기 어려움
+
+## Calculate Worst Case
+
+Linear Search의 Worst Case, Linear한 Data Structure에서 마지막에 목표 값이 존재할 때 (배열의 Length만큼 다 순회해야함)
+
+**T(n) = n**
+
+Binary Search의 Worst Case, 검색 범위를 줄여나감에 있어 결국 마지막 하나가 남을 때까지 범위를 줄이게 되는 경우
+
+**T(n) = log 2^n**
+
+실제로 이를 비교한 Graph는 아래의 그림과 같다.
+
+![graph]({{site.baseurl}}/http://arturmeyster.com/content/images/2015/02/binary-search-1.jpeg)
+
+
+## Big O Notation
 
 가장 영향력이 큰 부분만을 따지는 표기 법 (Approximation)
 
