@@ -85,38 +85,51 @@ int main(void)
 }
 ```
 
+Binary Search Algorithm
+
+Condition - 사용 이전에 데이터들이 정렬되어 있어야 한다.
+
+
+이전에 살펴본 Linear Search에 비해서 점점 탐색 범위를 줄여나가므로 좋은 성능을 보인다.
+
+Worst Case -> T(n) = Log2^N (Logartihmetic)
+
+![]({{site.baseurl}}/http://arturmeyster.com/content/images/2015/02/binary-search-1.jpeg)
+
 ```C
 #include <stdio.h>
 
 int BSearch(int ar[], int len, int target)
 {
 	int first = 0; // 배열의 초기 값 
-	int last = len - 1;
-	int mid;
+	int last = len - 1; // 배열의 마지막 값
+	int mid; // 배열의 중간 값
 	
-	while(first <= las)
+	while(first <= last) // Last가 First보다 크거나 같으면 반복
 	{
-		mid = (first + last) / 2;
+		mid = (first + last) / 2; // 중간 값 구하기 (몫)
 		
-		if(target == ar[mid])
+      	// 중간 값에 대한 3가지 조건 제시 - 일치, 대, 소
+      
+		if(target == ar[mid]) // 배열의 중간 값이 목표와 일치
 		{
-			return mid;
+			return mid; // 위치 값 Return
 		}
-		
-		else
+		else // 목표와 일치하지 않을 시
 		{
-			if(target < ar[mid])
+			if(target < ar[mid]) // 중간 값이 목표보다 크게 되면
 			{
-				last = mid - 1;
+				last = mid - 1; // 범위 줄이기 (중간보다 작은 값들을 대상, 왼쪽)
 			}
-			else
+			else // 중간 값이 목표보다 작게 되면
 			{
-				first = mid + 1;
+				first = mid + 1; // 범위 줄이기 (중간보다 큰 값들을 대상, 오른쪽)
 			}
-		}
-		
-		return -1;
+        }
 	}
+  
+  	// 순회 결과 Find 하지 못했다면 -1 값 Return
+  	return -1;
 }
 ```
 
@@ -133,14 +146,32 @@ Calculate Worst Case
 
 Calculate Average Case
 
-Why use Worst Case
+Why use Worst Case?
+
+일반적으로 Average Case는 구하는 과정이 어렵고, 정확한 결과를 구하기 어려움
 
 
+Big O Notation
 
-Binary Search Algorithm
+가장 영향력이 큰 부분만을 따지는 표기 법 (Approximation)
 
-Condition - 사용 이전에 데이터들이 정렬되어 있어야 한다.
+Question 아래의 Big O 들을 비교하라
 
-이전에 살펴본 Linear Search에 비해서 점점 탐색 범위를 줄여나가므로 좋은 성능을 보인다.
+3n + 2
+7n^3 + 3n^2 + 2
+2^n + n^2
+n + logn
+n + nlogn
+2^n + n^3
+
+축약해보면 아래와 같다.
+
+3n, n^3, 2^n, logn, nlogn, 2^n
+
+이를 비교하게 되면 다음과 같다.
+
+2^n + n^3 = 2^n + n^2 > 7n^3 + 3n^2 + 2 > n + nlogn > n + logn > 3n + 2
+
+
 
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
