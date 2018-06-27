@@ -137,7 +137,7 @@ int BSearch(int ar[], int len, int target)
 ## Best Case & Worst Case
 
 **Best Case** - 해당 Algorithm에서 Time Complexity가 가장 효율적인 경우   
-**Best Case** - 해당 Algorithm에서 Time Complexity가 가장 비효율적인 경우  
+**Worst Case** - 해당 Algorithm에서 Time Complexity가 가장 비효율적인 경우  
 
 Algorithm의 성능을 파악함에 있어 가장 중요한 것은 **Worst Case**이다.
 
