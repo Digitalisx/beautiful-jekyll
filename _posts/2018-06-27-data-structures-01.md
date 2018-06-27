@@ -159,21 +159,25 @@ Binary Search의 Worst Case, 검색 범위를 줄여나감에 있어 결국 마�
 
 실제로 이를 비교한 Graph는 아래의 그림과 같다.
 
-![graph]({{site.baseurl}}/http://arturmeyster.com/content/images/2015/02/binary-search-1.jpeg)
+
 
 
 ## Big O Notation
 
-가장 영향력이 큰 부분만을 따지는 표기 법 (Approximation)
+가장 영향력이 큰 부분만을 따지는 표기 법 (Approximation)  
 
-Question 아래의 Big O 들을 비교하라
+T(n) = n^2 + 2n + 9라고 주어졌을 때 Big O of n^2이라 할 수 있다.
 
-3n + 2
-7n^3 + 3n^2 + 2
-2^n + n^2
-n + logn
-n + nlogn
-2^n + n^3
+## Question
+
+아래의 Big O 들을 비교하라
+
+- 3n + 2
+- 7n^3 + 3n^2 + 2
+- 2^n + n^2
+- n + logn
+- n + nlogn
+- 2^n + n^3
 
 축약해보면 아래와 같다.
 
@@ -182,7 +186,3 @@ n + nlogn
 이를 비교하게 되면 다음과 같다.
 
 2^n + n^3 = 2^n + n^2 > 7n^3 + 3n^2 + 2 > n + nlogn > n + logn > 3n + 2
-
-
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
