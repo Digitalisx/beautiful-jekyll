@@ -5,32 +5,35 @@ title: Data Structures 01
 date: '2018-06-27'
 subtitle: Data Structures and Algorithm
 ---
-## A New Post
+## Data Structure & Algorithm
 
-Data Structure & Algorithm
+**Data Structure** : 데이터의 표현과 저장 방식
+Algorithm : 저장된 데이터를 대상으로 하는 문제 해결 방식
 
-Data Structure -> 데이터의 표현과 저장 방식
-Algorithm -> 저장된 데이터를 대상으로 하는 문제 해결 방식
-
-Data Structure에 따라 사용 Algorithm이 달라지므로 상호 의존적임
+수 많은 데이터를 더 타당하고 합리적으로 저장하고 처리하기 위해서 알아야 하는 학문
+Data Structure에 따라 사용 Algorithm이 달라지므로 둘은 상호 의존적임
 
 
-Algorithm 성능 분석법
+## Algorithm 성능 분석법
 
-Time Complexity (시간 복잡도) - 수행 시간
+**Time Complexity (시간 복잡도)** - 수행 시간
 
-Space Complexity (공간 복잡도) - 메모리 사용량
+**Space Complexity (공간 복잡도)** - 메모리 사용량
 
-일반적으로는 Time Complexity를 통해서 우위를 비교한다.
+일반적으로는 Time Complexity를 통해서 우위를 비교한다. (대게 속도에 관심이 많기 때문이다.)
 
 데이터량 (n) -> 연산 횟수 T(n)
 
-항상 좋은 알고리즘은 존재하지 않는다.
-데이터의 수, 성능에 대한 민감성에 따라 적절히 사용해야한다.
+항상 좋거나 절대적인 알고리즘은 존재하지 않는다. 데이터의 수, 성능에 대한 민감성에 따라 적절히 사용해야한다.
 
-Linear Search 예제
 
-```C
+## Linear Search
+
+일반적으로 가장 많이 사용해왔던 원소 탐색 방법으로 배열의 처음부터 끝까지 값을 비교한다. 
+
+## Linear Search 예제
+
+```c
 #include <stdio.h> // 표준 입출력 헤더
 
 int LSearch(int ar[], int len, int target) // LSearch 함수 Parameter 및 Return 값 설정
@@ -96,7 +99,7 @@ Worst Case -> T(n) = Log2^N (Logartihmetic)
 
 ![]({{site.baseurl}}/http://arturmeyster.com/content/images/2015/02/binary-search-1.jpeg)
 
-```C
+```c
 #include <stdio.h>
 
 int BSearch(int ar[], int len, int target)
