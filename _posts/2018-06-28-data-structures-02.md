@@ -51,9 +51,32 @@ int main(void)
 
 ## Recursion Design Case
 
-Factorial
+### Factorial
 
-Fibonacci Sequence
+```c
+#include <stdio.h>
+
+int Factorial(int num)
+{
+  if(num == 0) // num의 값으로 0이 들어오면
+  {
+    return 1; // 함수 종료 지점
+  }
+  else
+  {
+    return num * Factorial(num - 1) // 현재 num * Factorial(num - 1) 재귀 실행
+  }
+}
+
+int main(void)
+{
+  prinf("9! = %d", Factorial(9)); // 9에 대한 Factorial 함수 실행
+}
+```
+
+Factorial 함수의 Return 부분에 Factorail(num - 1)을 호출하고, (num == 0) 이라는 조건을 걸어 num이 1이 될때까지 재귀적으로 함수를 호출하게 된다.
+
+### Fibonacci Sequence
 
 Binary Search Algorithm
 
