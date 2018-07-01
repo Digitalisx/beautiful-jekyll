@@ -1,9 +1,9 @@
 ---
 layout: post
 published: true
-title: Data Structures 01
+title: Data Structures - Introduction and Search Algorithm
 date: '2018-06-27'
-subtitle: Data Structures and Algorithm
+subtitle: 'Time Complexity, Linear Search, Binary Search, Worst Case, Big O Notation'
 ---
 ## Data Structure & Algorithm
 
