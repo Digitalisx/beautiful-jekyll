@@ -21,7 +21,7 @@ C를 사용하면서 구조체를 통해서 사용자가 원하는 자료형을 
 
 예를 들어 만약에 Wallet이라는 자료형을 정의하고자 하는데 내부에 Cost라는 Member만 정의 해서는 Wallet이라는 자료형을 목적에 맞게 사용할 수 없게 된다. 그러므로 활용을 위한 입금이나 출금 같이 여러 기능 (연산) 또한 정의해줘야 한다.
 
-Object Oriented Programming를 수강했던 학생으로써 생각해본다면 OOP가 지향하는 Concept 중에서 EnCapsulation (캡슐화) 와 상당히 유사한 것으로 생각되고, 이러한 개념들에 대해서 미리 익숙해져 있어 ADT 역시 쉽게 이해 한 것 같다.
+Object Oriented Programming를 수강했던 학생으로써 생각해본다면 OOP가 지향하는 Concept 중에서 **EnCapsulation** (캡슐화) 와 상당히 유사한 것으로 생각되고, 이러한 개념들에 대해서 미리 익숙해져 있어 ADT 역시 쉽게 이해 한 것 같다.
 
 ADT로 많은 도움을 얻었던 사례 중 Python의 List가 존재하는데, append, remove, reverse 등의 List에 대한 ADT가 충분히 제공되었고, 그로 인해 List라는 Data Type을 비교적 쉽게 이용해왔던 것이라 생각된다.
 
