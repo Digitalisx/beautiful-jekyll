@@ -114,35 +114,35 @@ Fibo(5) -> Fibo(4) + Fibo(3) -> Fibo(3) + Fibo(2) + Fibo(2) + Fibo(1) -> Fibo(2)
 ```c
 #include <stdio.h>
 
-int BSearchRecur(int ar[], int first, int,second, int target)
+int BSearchRecur(int ar[], int first, int,second, int target) // 대상 배열, 시작 지점, 끝 지점, 대상
 {
   int mid;
-  if(first > last)
+  if(first > last) // 탐색 실패 Case
   {
     return -1;
   }
-  mid = (first + last) / 2;
+  mid = (first + last) / 2; // 중간 값 찾기
   
-  if(ar[mid] == target)
+  if(ar[mid] == target) // 중간 값과 대상 이리
   {
     return mid;
   }
-  else if(target < ar[mid])
+  else if(target < ar[mid]) // 중간 값이 더 클 시
   {
-    return BSearchRecur(ar, fisrt, mid - 1, target)
+    return BSearchRecur(ar, fisrt, mid - 1, target) // 중간 값 기준의 왼쪽 배열 대상으로 진행
   }
-  else
+  else // 중간 값이 더 작을 시
   {
-    return BSearchRecur(ar, fisrt, mid + 1, last, target)
+    return BSearchRecur(ar, fisrt, mid + 1, target) // 중간 값 기준의 오른쪽 배열 대상으로 진행
   }
 }
 
 int main(void)
 {
   int arr[] = {1,3,5,7,9};
-  int idx;
+  int idx; // BSearchRecur 함수 실행 후 Return 값을 저장할 Index 변수
   
-  idx = BSearch(arr, sizeof(arr)/sizeof(int), 7);
+  idx = BSearchRecur(arr, sizeof(arr)/sizeof(int), 7);
   if(idx == -1)
   {
     printf("Failed!\n");
@@ -152,7 +152,7 @@ int main(void)
     printf("타켓 저장 Index : %d \n", idx);
   }
   
-  idx = BSearch(arr, sizeof(arr)/sizeof(int), 4);
+  idx = BSearchRecur(arr, sizeof(arr)/sizeof(int), 4);
   if(idx == -1)
   {
     printf("Failed!\n");
@@ -166,7 +166,11 @@ int main(void)
 }
 ```
    
-이전에 학습한 Binary Search Algorithm은 While을 통해서 구현이 되어 있었다. 그러나 Binary Search Algorithm 역시 반복적인 Pattern의 행동이 포함되어 있고 이에 대해 Recursion화 가능하였던 기존의 코드와 같이 구현이 가능하다.
-
+이전에 학습한 Binary Search Algorithm은 While을 통해서 구현이 되어 있었다. 그러나 Binary Search Algorithm 역시 **반복적인 Pattern의 행동이 포함**되어 있고 이에 대해 Recursion화 가능하였던 기존의 코드와 같이 구현이 가능하다. 기본적인 원리는 동일하지만 중간 값에 대한 판별 후 함수를 Recursion하게 Return 한다는 점에서 차이가 존재한다.
+   
 
 ### The Tower of Hanoi
+
+
+
+
