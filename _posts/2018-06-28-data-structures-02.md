@@ -111,8 +111,62 @@ Fibo(5) -> Fibo(4) + Fibo(3) -> Fibo(3) + Fibo(2) + Fibo(2) + Fibo(1) -> Fibo(2)
 
 ### Binary Search Algorithm (Recursion Version)
 
+```c
+#include <stdio.h>
+
+int BSearchRecur(int ar[], int first, int,second, int target)
+{
+  int mid;
+  if(first > last)
+  {
+    return -1;
+  }
+  mid = (first + last) / 2;
+  
+  if(ar[mid] == target)
+  {
+    return mid;
+  }
+  else if(target < ar[mid])
+  {
+    return BSearchRecur(ar, fisrt, mid - 1, target)
+  }
+  else
+  {
+    return BSearchRecur(ar, fisrt, mid + 1, last, target)
+  }
+}
+
+int main(void)
+{
+  int arr[] = {1,3,5,7,9};
+  int idx;
+  
+  idx = BSearch(arr, sizeof(arr)/sizeof(int), 7);
+  if(idx == -1)
+  {
+    printf("Failed!\n");
+  }
+  else
+  {
+    printf("타켓 저장 Index : %d \n", idx);
+  }
+  
+  idx = BSearch(arr, sizeof(arr)/sizeof(int), 4);
+  if(idx == -1)
+  {
+    printf("Failed!\n");
+  }
+  else
+  {
+    printf("타겟 저장 Index : %d \n", idx);
+  }
+  
+  return 0;
+}
+```
+   
+이전에 학습한 Binary Search Algorithm은 While을 통해서 구현이 되어 있었다. 그러나 Binary Search Algorithm 역시 반복적인 Pattern의 행동이 포함되어 있고 이에 대해 Recursion화 가능하였던 기존의 코드와 같이 구현이 가능하다.
 
 
 ### The Tower of Hanoi
-
-
