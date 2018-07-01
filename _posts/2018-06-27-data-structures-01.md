@@ -177,8 +177,8 @@ T(n) = n^2 + 2n + 9라고 주어졌을 때 Big O of n^2이라 할 수 있다.
 
 축약해보면 아래와 같다.
 
-3n, n^3, 2^n, logn, nlogn, 2^n
+> 3n, n^3, 2^n, logn, nlogn, 2^n
 
 이를 비교하게 되면 다음과 같다.
 
-2^n + n^3 = 2^n + n^2 > 7n^3 + 3n^2 + 2 > n + nlogn > n + logn > 3n + 2
+> 2^n + n^3 = 2^n + n^2 > 7n^3 + 3n^2 + 2 > n + nlogn > n + logn > 3n + 2
