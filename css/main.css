@@ -1,14 +1,14 @@
 ---
 layout: null
 ---
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url("pygment_highlights.css");
 
 /* --- General --- */
 
 body {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   text-align: justify;
   word-break: normal;
   font-size: 18px;
